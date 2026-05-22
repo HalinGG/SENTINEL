@@ -50,6 +50,18 @@ def create_iam_user(iam: Any, username: str) -> str:
         raise
 
 
+def attach_user_policy(iam: Any, username: str) -> None:
+    """Attach S3FullAccess policy to an IAM user."""
+    try:
+        iam.attach_user_policy(
+            UserName=username,
+            PolicyArn="arn:aws:iam::aws:policy/AmazonS3FullAccess",
+        )
+        print(f"[IAM] Attached AmazonS3FullAccess to '{username}'")
+    except ClientError as e:
+        print(f"[IAM] Could not attach policy to '{username}': {e}")
+
+
 def create_iam_role(iam: Any, role_name: str) -> str:
     """Create an IAM role with S3FullAccess and return its ARN."""
     trust_policy = json.dumps({
@@ -374,6 +386,7 @@ def main() -> None:
     # --- IAM ---------------------------------------------------------------
     print("\n[1/4] Provisioning IAM resources …")
     compromised_user_arn = create_iam_user(iam, "compromised-user")
+    attach_user_policy(iam, "compromised-user")
     app_role_arn = create_iam_role(iam, "app-role")
 
     # --- S3 ----------------------------------------------------------------
