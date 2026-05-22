@@ -1,0 +1,139 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.vim/
+.emacs.d/
+*.iml
+
+# OS Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Environment & Configuration
+.env
+.env.local
+.env.*.local
+.env.*.js
+*.pem
+*.key
+.credentials
+credentials.json
+secrets.json
+
+# Test Coverage & Pytest
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.hypothesis/
+.nox/
+coverage.xml
+*.cover
+.pytest_cache
+
+# Logs
+*.log
+logs/
+*.out
+debug.log
+
+# AWS & LocalStack
+/tmp/localstack/
+.localstack/
+.aws/credentials
+.aws/config
+samconfig.toml
+
+# Node/JavaScript
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+dist/
+.next/
+out/
+
+# Go
+vendor/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+go.sum
+
+# Claude & AI
+.claude/
+claude_cache/
+ai_logs/
+*.swp
+
+# Build & Artifacts
+*.o
+*.a
+*.so
+.gradle/
+target/
+dist/
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.backup
+*~
+
+# System
+.vscode/settings.json
+.idea/workspace.xml
+local.properties
