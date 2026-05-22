@@ -1,0 +1,836 @@
+Audit log created at 2026-05-22T01:47:58Z
+================================================================================
+SENTINEL PHASE 2 AUDIT LOG
+FedRAMP Compliance Evidence
+Host: halingordon@vm
+================================================================================
+
+################################################################################
+# SENTINEL PHASE 2 AUDIT LOG
+# FedRAMP Compliance Evidence
+# PHASE 2 SETUP BEGIN: 2026-05-22T02:10:34Z
+# User      : uid=1001(halingordon) gid=1002(halingordon) groups=1002(halingordon),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),102(lxd),108(netdev),109(docker),1000(ubuntu),1001(google-sudoers)
+# Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+# Working   : /home/halingordon/sentinel
+################################################################################
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: whoami
+  Command   : whoami
+  Started   : 2026-05-22T02:10:34Z
+  Finished  : 2026-05-22T02:10:34Z
+  Duration  : 61059027ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+halingordon
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: id
+  Command   : id
+  Started   : 2026-05-22T02:10:34Z
+  Finished  : 2026-05-22T02:10:35Z
+  Duration  : 20514873ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+uid=1001(halingordon) gid=1002(halingordon) groups=1002(halingordon),4(adm),20(dialout),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),102(lxd),108(netdev),109(docker),1000(ubuntu),1001(google-sudoers)
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: uname
+  Command   : uname -a
+  Started   : 2026-05-22T02:10:35Z
+  Finished  : 2026-05-22T02:10:35Z
+  Duration  : 18498387ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Linux sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal 7.0.0-1003-gcp #3-Ubuntu SMP PREEMPT Mon Apr 13 16:29:20 UTC 2026 x86_64 GNU/Linux
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: python3 version
+  Command   : python3 --version
+  Started   : 2026-05-22T02:10:35Z
+  Finished  : 2026-05-22T02:10:35Z
+  Duration  : 47246246ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Python 3.14.4
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: pip3 version
+  Command   : pip3 --version
+  Started   : 2026-05-22T02:10:35Z
+  Finished  : 2026-05-22T02:10:37Z
+  Duration  : -1601474251601546713ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+pip 26.1.1 from /home/halingordon/sentinel/venv/lib/python3.14/site-packages/pip (python 3.14)
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: docker version
+  Command   : docker --version
+  Started   : 2026-05-22T02:10:37Z
+  Finished  : 2026-05-22T02:10:37Z
+  Duration  : 1601474254003445554ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Docker version 29.1.3, build 29.1.3-0ubuntu4.1
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: docker compose
+  Command   : docker compose version
+  Started   : 2026-05-22T02:10:37Z
+  Finished  : 2026-05-22T02:10:39Z
+  Duration  : -1601474253913065839ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Docker Compose version 2.40.3+ds1-0ubuntu1
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: localstack cli
+  Command   : localstack --version
+  Started   : 2026-05-22T02:10:39Z
+  Finished  : 2026-05-22T02:10:42Z
+  Duration  : 1601474258344892178ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+LocalStack CLI 2026.5.0
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: aws cli version
+  Command   : aws --version
+  Started   : 2026-05-22T02:10:42Z
+  Finished  : 2026-05-22T02:10:44Z
+  Duration  : 2235742823ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+aws-cli/1.45.12 Python/3.14.4 Linux/7.0.0-1003-gcp botocore/1.43.12
+
+================================================================================
+AUDIT ENTRY
+  Label     : ENV: awslocal version
+  Command   : awslocal --version
+  Started   : 2026-05-22T02:10:44Z
+  Finished  : 2026-05-22T02:10:45Z
+  Duration  : 770028494ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+aws-cli/1.45.12 Python/3.14.4 Linux/7.0.0-1003-gcp botocore/1.43.12
+
+================================================================================
+AUDIT ENTRY
+  Label     : PIP: upgrade localstack
+  Command   : pip3 install --upgrade localstack
+  Started   : 2026-05-22T02:10:45Z
+  Finished  : 2026-05-22T02:10:47Z
+  Duration  : 1899037809ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Requirement already satisfied: localstack in ./venv/lib/python3.14/site-packages (2026.5.0)
+Requirement already satisfied: asn1crypto in ./venv/lib/python3.14/site-packages (from localstack) (1.5.1)
+Requirement already satisfied: cachetools>=5.0 in ./venv/lib/python3.14/site-packages (from localstack) (7.1.3)
+Requirement already satisfied: click>=8.2.0 in ./venv/lib/python3.14/site-packages (from localstack) (8.4.0)
+Requirement already satisfied: cryptography in ./venv/lib/python3.14/site-packages (from localstack) (48.0.0)
+Requirement already satisfied: dnslib>=0.9.10 in ./venv/lib/python3.14/site-packages (from localstack) (0.9.26)
+Requirement already satisfied: dnspython>=1.16.0 in ./venv/lib/python3.14/site-packages (from localstack) (2.8.0)
+Requirement already satisfied: docker>=6.1.1 in ./venv/lib/python3.14/site-packages (from localstack) (7.1.0)
+Requirement already satisfied: packaging in ./venv/lib/python3.14/site-packages (from localstack) (26.2)
+Requirement already satisfied: plux>=1.16.0 in ./venv/lib/python3.14/site-packages (from localstack) (1.16.0)
+Requirement already satisfied: psutil>=5.4.8 in ./venv/lib/python3.14/site-packages (from localstack) (7.2.2)
+Requirement already satisfied: pyjwt>=1.7.0 in ./venv/lib/python3.14/site-packages (from pyjwt[crypto]>=1.7.0->localstack) (2.12.1)
+Requirement already satisfied: pyotp>=2.9.0 in ./venv/lib/python3.14/site-packages (from localstack) (2.9.0)
+Requirement already satisfied: python-dateutil>=2.8 in ./venv/lib/python3.14/site-packages (from localstack) (2.9.0.post0)
+Requirement already satisfied: python-dotenv>=0.19.1 in ./venv/lib/python3.14/site-packages (from localstack) (1.2.2)
+Requirement already satisfied: pyyaml>=5.1 in ./venv/lib/python3.14/site-packages (from localstack) (6.0.3)
+Requirement already satisfied: requests>=2.20.0 in ./venv/lib/python3.14/site-packages (from localstack) (2.31.0)
+Requirement already satisfied: rich>=12.3.0 in ./venv/lib/python3.14/site-packages (from localstack) (15.0.0)
+Requirement already satisfied: semver>=2.10 in ./venv/lib/python3.14/site-packages (from localstack) (3.0.4)
+Requirement already satisfied: tabulate in ./venv/lib/python3.14/site-packages (from localstack) (0.10.0)
+Requirement already satisfied: urllib3>=1.26.0 in ./venv/lib/python3.14/site-packages (from docker>=6.1.1->localstack) (2.7.0)
+Requirement already satisfied: cffi>=2.0.0 in ./venv/lib/python3.14/site-packages (from cryptography->localstack) (2.0.0)
+Requirement already satisfied: pycparser in ./venv/lib/python3.14/site-packages (from cffi>=2.0.0->cryptography->localstack) (3.0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.14/site-packages (from python-dateutil>=2.8->localstack) (1.17.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./venv/lib/python3.14/site-packages (from requests>=2.20.0->localstack) (3.4.7)
+Requirement already satisfied: idna<4,>=2.5 in ./venv/lib/python3.14/site-packages (from requests>=2.20.0->localstack) (3.15)
+Requirement already satisfied: certifi>=2017.4.17 in ./venv/lib/python3.14/site-packages (from requests>=2.20.0->localstack) (2026.4.22)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./venv/lib/python3.14/site-packages (from rich>=12.3.0->localstack) (4.2.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./venv/lib/python3.14/site-packages (from rich>=12.3.0->localstack) (2.20.0)
+Requirement already satisfied: mdurl~=0.1 in ./venv/lib/python3.14/site-packages (from markdown-it-py>=2.2.0->rich>=12.3.0->localstack) (0.1.2)
+
+================================================================================
+AUDIT ENTRY
+  Label     : PIP: upgrade awscli-local
+  Command   : pip3 install --upgrade awscli-local
+  Started   : 2026-05-22T02:10:47Z
+  Finished  : 2026-05-22T02:10:48Z
+  Duration  : 907031176ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Requirement already satisfied: awscli-local in ./venv/lib/python3.14/site-packages (0.22.2)
+Requirement already satisfied: localstack-client in ./venv/lib/python3.14/site-packages (from awscli-local) (2.11)
+Requirement already satisfied: boto3 in ./venv/lib/python3.14/site-packages (from localstack-client->awscli-local) (1.43.12)
+Requirement already satisfied: botocore<1.44.0,>=1.43.12 in ./venv/lib/python3.14/site-packages (from boto3->localstack-client->awscli-local) (1.43.12)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./venv/lib/python3.14/site-packages (from boto3->localstack-client->awscli-local) (1.1.0)
+Requirement already satisfied: s3transfer<0.18.0,>=0.17.0 in ./venv/lib/python3.14/site-packages (from boto3->localstack-client->awscli-local) (0.17.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./venv/lib/python3.14/site-packages (from botocore<1.44.0,>=1.43.12->boto3->localstack-client->awscli-local) (2.9.0.post0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in ./venv/lib/python3.14/site-packages (from botocore<1.44.0,>=1.43.12->boto3->localstack-client->awscli-local) (2.7.0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.14/site-packages (from python-dateutil<3.0.0,>=2.1->botocore<1.44.0,>=1.43.12->boto3->localstack-client->awscli-local) (1.17.0)
+
+================================================================================
+AUDIT ENTRY
+  Label     : PIP: upgrade awscli
+  Command   : pip3 install --upgrade awscli
+  Started   : 2026-05-22T02:10:48Z
+  Finished  : 2026-05-22T02:10:55Z
+  Duration  : 6957983537ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Requirement already satisfied: awscli in ./venv/lib/python3.14/site-packages (1.45.12)
+Collecting awscli
+  Downloading awscli-1.45.13-py3-none-any.whl.metadata (11 kB)
+Collecting botocore==1.43.13 (from awscli)
+  Downloading botocore-1.43.13-py3-none-any.whl.metadata (5.6 kB)
+Requirement already satisfied: docutils<=0.19,>=0.18.1 in ./venv/lib/python3.14/site-packages (from awscli) (0.19)
+Requirement already satisfied: s3transfer<0.18.0,>=0.17.0 in ./venv/lib/python3.14/site-packages (from awscli) (0.17.0)
+Requirement already satisfied: PyYAML<6.1,>=3.10 in ./venv/lib/python3.14/site-packages (from awscli) (6.0.3)
+Requirement already satisfied: colorama<0.4.7,>=0.2.5 in ./venv/lib/python3.14/site-packages (from awscli) (0.4.6)
+Requirement already satisfied: rsa<4.8,>=3.1.2 in ./venv/lib/python3.14/site-packages (from awscli) (4.7.2)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in ./venv/lib/python3.14/site-packages (from botocore==1.43.13->awscli) (1.1.0)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in ./venv/lib/python3.14/site-packages (from botocore==1.43.13->awscli) (2.9.0.post0)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in ./venv/lib/python3.14/site-packages (from botocore==1.43.13->awscli) (2.7.0)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.14/site-packages (from python-dateutil<3.0.0,>=2.1->botocore==1.43.13->awscli) (1.17.0)
+Requirement already satisfied: pyasn1>=0.1.3 in ./venv/lib/python3.14/site-packages (from rsa<4.8,>=3.1.2->awscli) (0.6.3)
+Downloading awscli-1.45.13-py3-none-any.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 20.3 MB/s  0:00:00
+Downloading botocore-1.43.13-py3-none-any.whl (15.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.1/15.1 MB 35.6 MB/s  0:00:00
+Installing collected packages: botocore, awscli
+  Attempting uninstall: botocore
+    Found existing installation: botocore 1.43.12
+    Uninstalling botocore-1.43.12:
+      Successfully uninstalled botocore-1.43.12
+  Attempting uninstall: awscli
+    Found existing installation: awscli 1.45.12
+    Uninstalling awscli-1.45.12:
+      Successfully uninstalled awscli-1.45.12
+
+Successfully installed awscli-1.45.13 botocore-1.43.13
+
+================================================================================
+AUDIT ENTRY
+  Label     : PIP: list installed packages
+  Command   : pip3 list --format=columns
+  Started   : 2026-05-22T02:10:55Z
+  Finished  : 2026-05-22T02:10:56Z
+  Duration  : 689622952ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+Package                     Version
+--------------------------- -----------
+asn1crypto                  1.5.1
+awscli                      1.45.13
+awscli-local                0.22.2
+boto3                       1.43.12
+botocore                    1.43.13
+cachetools                  7.1.3
+certifi                     2026.4.22
+cffi                        2.0.0
+charset-normalizer          3.4.7
+click                       8.4.0
+colorama                    0.4.6
+cryptography                48.0.0
+dnslib                      0.9.26
+dnspython                   2.8.0
+docker                      7.1.0
+docutils                    0.19
+google-api-core             2.25.2
+google-auth                 2.53.0
+google-cloud-secret-manager 2.17.0
+googleapis-common-protos    1.75.0
+grpc-google-iam-v1          0.14.4
+grpcio                      1.80.0
+grpcio-status               1.62.3
+idna                        3.15
+jmespath                    1.1.0
+localstack                  2026.5.0
+localstack-client           2.11
+markdown-it-py              4.2.0
+mdurl                       0.1.2
+packaging                   26.2
+pip                         26.1.1
+plux                        1.16.0
+proto-plus                  1.28.0
+protobuf                    7.35.0
+psutil                      7.2.2
+pyasn1                      0.6.3
+pyasn1_modules              0.4.2
+pycparser                   3.0
+Pygments                    2.20.0
+PyJWT                       2.12.1
+pyotp                       2.9.0
+python-dateutil             2.9.0.post0
+python-dotenv               1.2.2
+PyYAML                      6.0.3
+requests                    2.31.0
+rich                        15.0.0
+rsa                         4.7.2
+s3transfer                  0.17.0
+semver                      3.0.4
+setuptools                  82.0.1
+six                         1.17.0
+tabulate                    0.10.0
+typing_extensions           4.15.0
+urllib3                     2.7.0
+wheel                       0.47.0
+
+================================================================================
+AUDIT ENTRY
+  Label     : DOCKER: ps -a before
+  Command   : docker ps -a
+  Started   : 2026-05-22T02:10:56Z
+  Finished  : 2026-05-22T02:10:57Z
+  Duration  : 1030586415ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+CONTAINER ID   IMAGE                     COMMAND                  CREATED        STATUS                       PORTS                                                                                                               NAMES
+90419e5149ed   localstack/localstack:3   "docker-entrypoint.sh"   19 hours ago   Exited (255) 9 minutes ago   0.0.0.0:4566->4566/tcp, [::]:4566->4566/tcp, 4510-4559/tcp, 5678/tcp, 0.0.0.0:4571->4571/tcp, [::]:4571->4571/tcp   localstack
+ea752bd9deaa   hello-world               "/hello"                 2 days ago     Exited (0) 2 days ago                                                                                                                            nifty_beaver
+d4fb2383f7f2   hello-world               "/hello"                 5 days ago     Exited (0) 5 days ago                                                                                                                            competent_satoshi
+
+================================================================================
+AUDIT ENTRY
+  Label     : DOCKER: images
+  Command   : docker images
+  Started   : 2026-05-22T02:10:57Z
+  Finished  : 2026-05-22T02:10:58Z
+  Duration  : 1138584733ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+IMAGE                          ID             DISK USAGE   CONTENT SIZE   EXTRA
+hello-world:latest             0e760fdfbc48       25.9kB         9.49kB   U    
+localstack/localstack:3        b279c01f4cfb       2.08GB          636MB   U    
+localstack/localstack:latest   a3517e7b7c14       1.84GB          475MB        
+WARNING: This output is designed for human readability. For machine-readable output, please use --format.
+
+================================================================================
+AUDIT ENTRY
+  Label     : DOCKER: compose down
+  Command   : docker compose -f /home/halingordon/sentinel/docker-compose.yml down --remove-orphans
+  Started   : 2026-05-22T02:10:58Z
+  Finished  : 2026-05-22T02:10:59Z
+  Duration  : 687731975ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+ Container localstack  Stopping
+ Container localstack  Stopped
+ Container localstack  Removing
+ Container localstack  Removed
+ Network sentinel_default  Removing
+ Network sentinel_default  Removed
+
+================================================================================
+AUDIT ENTRY
+  Label     : DOCKER: compose up -d
+  Command   : docker compose -f /home/halingordon/sentinel/docker-compose.yml up -d
+  Started   : 2026-05-22T02:10:59Z
+  Finished  : 2026-05-22T02:11:01Z
+  Duration  : 2586097861ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+ Network sentinel_default  Creating
+ Network sentinel_default  Created
+ Container localstack  Creating
+ Container localstack  Created
+ Container localstack  Starting
+ Container localstack  Started
+
+================================================================================
+AUDIT ENTRY
+  Label     : DOCKER: ps -a after
+  Command   : docker ps -a
+  Started   : 2026-05-22T02:11:01Z
+  Finished  : 2026-05-22T02:11:02Z
+  Duration  : -1601474275682216630ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+CONTAINER ID   IMAGE                     COMMAND                  CREATED         STATUS                                     PORTS                                                                                                               NAMES
+b3f52d3e663d   localstack/localstack:3   "docker-entrypoint.sh"   3 seconds ago   Up Less than a second (health: starting)   0.0.0.0:4566->4566/tcp, [::]:4566->4566/tcp, 4510-4559/tcp, 5678/tcp, 0.0.0.0:4571->4571/tcp, [::]:4571->4571/tcp   localstack
+ea752bd9deaa   hello-world               "/hello"                 2 days ago      Exited (0) 2 days ago                                                                                                                                          nifty_beaver
+d4fb2383f7f2   hello-world               "/hello"                 5 days ago      Exited (0) 5 days ago                                                                                                                                          competent_satoshi
+
+[ 2026-05-22T02:11:02Z ] Waiting for LocalStack IAM to become available...
+[ 2026-05-22T02:11:02Z ] Poll 1/40 — iam not ready
+[ 2026-05-22T02:11:05Z ] Poll 2/40 — iam not ready
+[ 2026-05-22T02:11:08Z ] Poll 3/40 — iam not ready
+[ 2026-05-22T02:11:11Z ] Poll 4/40 — iam not ready
+[ 2026-05-22T02:11:21Z ] LocalStack ready after 5 polls
+
+================================================================================
+AUDIT ENTRY
+  Label     : LOCALSTACK: health endpoint
+  Command   : bash -c curl -s http://localhost:4566/_localstack/health | python3 -m json.tool
+  Started   : 2026-05-22T02:11:21Z
+  Finished  : 2026-05-22T02:11:22Z
+  Duration  : -1601474293497940383ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "services": {
+        "acm": "disabled",
+        "apigateway": "disabled",
+        "cloudformation": "disabled",
+        "cloudwatch": "disabled",
+        "config": "disabled",
+        "dynamodb": "disabled",
+        "dynamodbstreams": "disabled",
+        "ec2": "disabled",
+        "es": "disabled",
+        "events": "available",
+        "firehose": "disabled",
+        "iam": "available",
+        "kinesis": "disabled",
+        "kms": "disabled",
+        "lambda": "disabled",
+        "logs": "disabled",
+        "opensearch": "disabled",
+        "redshift": "disabled",
+        "resource-groups": "disabled",
+        "resourcegroupstaggingapi": "disabled",
+        "route53": "disabled",
+        "route53resolver": "disabled",
+        "s3": "disabled",
+        "s3control": "disabled",
+        "scheduler": "disabled",
+        "secretsmanager": "disabled",
+        "ses": "disabled",
+        "sns": "disabled",
+        "sqs": "disabled",
+        "ssm": "disabled",
+        "stepfunctions": "disabled",
+        "sts": "disabled",
+        "support": "disabled",
+        "swf": "disabled",
+        "transcribe": "disabled"
+    },
+    "edition": "community",
+    "version": "3.8.1"
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : DOCKER: localstack logs (start)
+  Command   : docker logs localstack
+  Started   : 2026-05-22T02:11:22Z
+  Finished  : 2026-05-22T02:11:22Z
+  Duration  : 104451862ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+
+LocalStack version: 3.8.1
+LocalStack build date: 2024-10-08
+LocalStack build git hash: 529aba7d8
+
+Ready.
+
+[ 2026-05-22T02:11:22Z ] AWS_ACCESS_KEY_ID=test  AWS_DEFAULT_REGION=us-east-1
+
+================================================================================
+AUDIT ENTRY
+  Label     : IAM: list-users (baseline)
+  Command   : awslocal iam list-users
+  Started   : 2026-05-22T02:11:22Z
+  Finished  : 2026-05-22T02:11:27Z
+  Duration  : 4808052444ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Users": []
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : IAM: create-role sentinel-cloudtrail-role
+  Command   : awslocal iam create-role --role-name sentinel-cloudtrail-role --assume-role-policy-document file:///tmp/sentinel-trust-policy.json
+  Started   : 2026-05-22T02:11:27Z
+  Finished  : 2026-05-22T02:11:29Z
+  Duration  : 2234253305ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Role": {
+        "Path": "/",
+        "RoleName": "sentinel-cloudtrail-role",
+        "RoleId": "AROAQAAAAAAAFYMLTQG2S",
+        "Arn": "arn:aws:iam::000000000000:role/sentinel-cloudtrail-role",
+        "CreateDate": "2026-05-22T02:11:29.212000Z",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "cloudtrail.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : IAM: put-role-policy sentinel-cloudtrail-policy
+  Command   : awslocal iam put-role-policy --role-name sentinel-cloudtrail-role --policy-name sentinel-cloudtrail-policy --policy-document file:///tmp/sentinel-inline-policy.json
+  Started   : 2026-05-22T02:11:29Z
+  Finished  : 2026-05-22T02:11:30Z
+  Duration  : 1095067959ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+
+================================================================================
+AUDIT ENTRY
+  Label     : IAM: get-role-policy (verify)
+  Command   : awslocal iam get-role-policy --role-name sentinel-cloudtrail-role --policy-name sentinel-cloudtrail-policy
+  Started   : 2026-05-22T02:11:30Z
+  Finished  : 2026-05-22T02:11:31Z
+  Duration  : 1072124819ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "RoleName": "sentinel-cloudtrail-role",
+    "PolicyName": "sentinel-cloudtrail-policy",
+    "PolicyDocument": {
+        "Version": "2012-10-17",
+        "Statement": [
+            {
+                "Effect": "Allow",
+                "Action": [
+                    "cloudtrail:GetTrailStatus",
+                    "cloudtrail:DescribeTrails",
+                    "cloudtrail:LookupEvents",
+                    "logs:CreateLogGroup",
+                    "logs:CreateLogStream",
+                    "logs:PutLogEvents"
+                ],
+                "Resource": "*"
+            }
+        ]
+    }
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : IAM: list-roles
+  Command   : awslocal iam list-roles
+  Started   : 2026-05-22T02:11:31Z
+  Finished  : 2026-05-22T02:11:32Z
+  Duration  : 912133559ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Roles": [
+        {
+            "Path": "/",
+            "RoleName": "sentinel-cloudtrail-role",
+            "RoleId": "AROAQAAAAAAAFYMLTQG2S",
+            "Arn": "arn:aws:iam::000000000000:role/sentinel-cloudtrail-role",
+            "CreateDate": "2026-05-22T02:11:29.212766Z",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "cloudtrail.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        }
+    ]
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : IAM: list-users (final)
+  Command   : awslocal iam list-users
+  Started   : 2026-05-22T02:11:32Z
+  Finished  : 2026-05-22T02:11:33Z
+  Duration  : 912275148ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Users": []
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : EVENTS: list-event-buses (baseline)
+  Command   : awslocal events list-event-buses
+  Started   : 2026-05-22T02:11:33Z
+  Finished  : 2026-05-22T02:11:35Z
+  Duration  : -1601474304165475757ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "EventBuses": [
+        {
+            "Name": "default",
+            "Arn": "arn:aws:events:us-east-1:000000000000:event-bus/default"
+        }
+    ]
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : EVENTS: create-event-bus sentinel-events
+  Command   : awslocal events create-event-bus --name sentinel-events
+  Started   : 2026-05-22T02:11:35Z
+  Finished  : 2026-05-22T02:11:36Z
+  Duration  : -1601474305485006005ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "EventBusArn": "arn:aws:events:us-east-1:000000000000:event-bus/sentinel-events"
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : EVENTS: put-rule sentinel-threat-intel
+  Command   : awslocal events put-rule --name sentinel-threat-intel --event-bus-name sentinel-events --event-pattern {"source":["sentinel.threat-intel"]} --state ENABLED --description Sentinel threat intelligence events
+  Started   : 2026-05-22T02:11:36Z
+  Finished  : 2026-05-22T02:11:37Z
+  Duration  : 1045570820ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "RuleArn": "arn:aws:events:us-east-1:000000000000:rule/sentinel-events/sentinel-threat-intel"
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : EVENTS: list-rules sentinel-events
+  Command   : awslocal events list-rules --event-bus-name sentinel-events
+  Started   : 2026-05-22T02:11:37Z
+  Finished  : 2026-05-22T02:11:38Z
+  Duration  : 899989390ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Rules": [
+        {
+            "Name": "sentinel-threat-intel",
+            "Arn": "arn:aws:events:us-east-1:000000000000:rule/sentinel-events/sentinel-threat-intel",
+            "EventPattern": "{\"source\":[\"sentinel.threat-intel\"]}",
+            "State": "ENABLED",
+            "Description": "Sentinel threat intelligence events",
+            "EventBusName": "sentinel-events"
+        }
+    ]
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : EVENTS: list-event-buses (final)
+  Command   : awslocal events list-event-buses
+  Started   : 2026-05-22T02:11:38Z
+  Finished  : 2026-05-22T02:11:39Z
+  Duration  : -1601474308192908185ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "EventBuses": [
+        {
+            "Name": "default",
+            "Arn": "arn:aws:events:us-east-1:000000000000:event-bus/default"
+        },
+        {
+            "Name": "sentinel-events",
+            "Arn": "arn:aws:events:us-east-1:000000000000:event-bus/sentinel-events"
+        }
+    ]
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : FINAL: localstack health
+  Command   : bash -c curl -s http://localhost:4566/_localstack/health | python3 -m json.tool
+  Started   : 2026-05-22T02:11:39Z
+  Finished  : 2026-05-22T02:11:39Z
+  Duration  : 119929178ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "services": {
+        "acm": "disabled",
+        "apigateway": "disabled",
+        "cloudformation": "disabled",
+        "cloudwatch": "disabled",
+        "config": "disabled",
+        "dynamodb": "disabled",
+        "dynamodbstreams": "disabled",
+        "ec2": "disabled",
+        "es": "disabled",
+        "events": "running",
+        "firehose": "disabled",
+        "iam": "running",
+        "kinesis": "disabled",
+        "kms": "disabled",
+        "lambda": "disabled",
+        "logs": "disabled",
+        "opensearch": "disabled",
+        "redshift": "disabled",
+        "resource-groups": "disabled",
+        "resourcegroupstaggingapi": "disabled",
+        "route53": "disabled",
+        "route53resolver": "disabled",
+        "s3": "disabled",
+        "s3control": "disabled",
+        "scheduler": "disabled",
+        "secretsmanager": "disabled",
+        "ses": "disabled",
+        "sns": "disabled",
+        "sqs": "disabled",
+        "ssm": "disabled",
+        "stepfunctions": "disabled",
+        "sts": "disabled",
+        "support": "disabled",
+        "swf": "disabled",
+        "transcribe": "disabled"
+    },
+    "edition": "community",
+    "version": "3.8.1"
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : FINAL: docker ps
+  Command   : docker ps --filter name=localstack
+  Started   : 2026-05-22T02:11:39Z
+  Finished  : 2026-05-22T02:11:40Z
+  Duration  : -1601474309298882762ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+CONTAINER ID   IMAGE                     COMMAND                  CREATED          STATUS                    PORTS                                                                                                               NAMES
+b3f52d3e663d   localstack/localstack:3   "docker-entrypoint.sh"   41 seconds ago   Up 38 seconds (healthy)   0.0.0.0:4566->4566/tcp, [::]:4566->4566/tcp, 4510-4559/tcp, 5678/tcp, 0.0.0.0:4571->4571/tcp, [::]:4571->4571/tcp   localstack
+
+================================================================================
+AUDIT ENTRY
+  Label     : FINAL: iam list-users
+  Command   : awslocal iam list-users
+  Started   : 2026-05-22T02:11:40Z
+  Finished  : 2026-05-22T02:11:40Z
+  Duration  : 1601474310824880833ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Users": []
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : FINAL: iam list-roles
+  Command   : awslocal iam list-roles
+  Started   : 2026-05-22T02:11:40Z
+  Finished  : 2026-05-22T02:11:42Z
+  Duration  : 1293653602ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "Roles": [
+        {
+            "Path": "/",
+            "RoleName": "sentinel-cloudtrail-role",
+            "RoleId": "AROAQAAAAAAAFYMLTQG2S",
+            "Arn": "arn:aws:iam::000000000000:role/sentinel-cloudtrail-role",
+            "CreateDate": "2026-05-22T02:11:29.212766Z",
+            "AssumeRolePolicyDocument": {
+                "Version": "2012-10-17",
+                "Statement": [
+                    {
+                        "Effect": "Allow",
+                        "Principal": {
+                            "Service": "cloudtrail.amazonaws.com"
+                        },
+                        "Action": "sts:AssumeRole"
+                    }
+                ]
+            },
+            "MaxSessionDuration": 3600
+        }
+    ]
+}
+
+================================================================================
+AUDIT ENTRY
+  Label     : FINAL: events list-buses
+  Command   : awslocal events list-event-buses
+  Started   : 2026-05-22T02:11:42Z
+  Finished  : 2026-05-22T02:11:43Z
+  Duration  : 831723811ms
+  Exit Code : 0
+  User      : halingordon
+  Host      : sentinel-dev.us-west1-b.c.ai-sentinel-496600.internal
+{
+    "EventBuses": [
+        {
+            "Name": "default",
+            "Arn": "arn:aws:events:us-east-1:000000000000:event-bus/default"
+        },
+        {
+            "Name": "sentinel-events",
+            "Arn": "arn:aws:events:us-east-1:000000000000:event-bus/sentinel-events"
+        }
+    ]
+}
+
+################################################################################
+# PHASE 2 SETUP COMPLETE: 2026-05-22T02:11:43Z
+# Audit log: /home/halingordon/sentinel/audit.log
+################################################################################
