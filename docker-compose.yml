@@ -6,7 +6,7 @@ services:
       - "4566:4566"
       - "4571:4571"
     environment:
-      - SERVICES=iam,cloudtrail,events
+      - SERVICES=iam,s3,cloudtrail,events
       - DEBUG=0
     volumes:
       - /tmp/localstack:/var/lib/localstack
