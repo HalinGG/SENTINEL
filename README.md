@@ -62,20 +62,29 @@ Security Controls
 Project Structure
 
 sentinel/
-├── agent.py              # Autonomous triage agent
-├── main.py               # Threat intel aggregator
-├── mcp_server.py         # MCP server with tool registration
-├── mcp_tools.py          # CloudTrail, IAM, quarantine functions
-├── red_team.py           # Prompt injection attack simulation
-├── seed_localstack.py    # LocalStack IR scenario seed data
-├── feeds/
-│   ├── abuseipdb.py      # AbuseIPDB threat intel
-│   └── alien.py          # AlienVault OTX threat intel
-└── tests/
-    ├── test_mcp_tools.py     # 6 tests
-    ├── test_mcp_server.py    # 3 tests
-    ├── test_agent.py         # 4 tests
-    └── test_red_team.py      # 3 tests
+
+Core Agent Files:
+- agent.py — Autonomous triage agent with Claude reasoning
+- main.py — Threat intel aggregator entry point
+- mcp_server.py — MCP server with tool registration
+- mcp_tools.py — CloudTrail, IAM, quarantine functions
+- red_team.py — Prompt injection attack simulation
+- seed_localstack.py — LocalStack IR scenario seed data
+
+Threat Intelligence Feeds:
+- feeds/abuseipdb.py — AbuseIPDB threat intel integration
+- feeds/alien.py — AlienVault OTX threat intel integration
+
+Test Suite (16 tests total):
+- tests/test_mcp_tools.py — 6 tests for CloudTrail, IAM, quarantine
+- tests/test_mcp_server.py — 3 tests for MCP server and schemas
+- tests/test_agent.py — 4 tests for autonomous triage decisions
+- tests/test_red_team.py — 3 tests for prompt injection resistance
+
+Configuration:
+- docker-compose.yml — LocalStack container setup
+- requirements.txt — Python dependencies
+- .gitignore — Git ignore rules
 
 Prerequisites
 
