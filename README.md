@@ -77,7 +77,6 @@ sentinel/
     ├── test_agent.py         # 4 tests
     └── test_red_team.py      # 3 tests
 
-
 Prerequisites
 
 	•	GCP account with Secret Manager API enabled
