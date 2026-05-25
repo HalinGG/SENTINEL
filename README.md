@@ -20,7 +20,7 @@ Features
 
 How It Works
 
-	1.	Receive Finding: GuardDuty-style security alert with principal, IP, event type, severity
+	1.	Receive Finding: GuardDuty simulated security alert with principal, IP, event type, severity
 	2.	Gather Evidence: Query threat intel (AbuseIPDB + OTX), CloudTrail activity, IAM policies
 	3.	Reason: Claude API analyzes all evidence with chain-of-thought reasoning
 	4.	Decide: QUARANTINE (disable immediately) or MONITOR (log and alert)
@@ -35,7 +35,7 @@ SENTINEL detects a realistic AWS account compromise progression:
 	•	T+20:00: compromised-user uploads malware (persistence)
 	•	T+60:00: compromised-user encrypts S3 buckets (ransomware)
 
-SENTINEL Decision: QUARANTINE with 95% confidence. Reasoning: GuardDuty flagged as malicious, PutBucketEncryption is ransomware indicator, user has S3FullAccess, 4 recent malicious events.
+SENTINEL Decision(Result from above example): QUARANTINE with 95% confidence. Reasoning: GuardDuty flagged as malicious, PutBucketEncryption is ransomware indicator, user has S3FullAccess, 4 recent malicious events.
 
 Red Team Findings
 
