@@ -1,0 +1,1 @@
+{"nodes": [{"type": "Node/Master", "location": "127.0.0.1"}], "services": [{"service": "Kubelet API", "location": "127.0.0.1:10250"}, {"service": "Unrecognized K8s API", "location": "127.0.0.1:6443"}], "vulnerabilities": []}

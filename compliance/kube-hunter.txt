@@ -1,0 +1,23 @@
+
+Nodes
++-------------+-----------+
+| TYPE        | LOCATION  |
++-------------+-----------+
+| Node/Master | 127.0.0.1 |
++-------------+-----------+
+
+Detected Services
++----------------------+-----------------+----------------------+
+| SERVICE              | LOCATION        | DESCRIPTION          |
++----------------------+-----------------+----------------------+
+| Unrecognized K8s API | 127.0.0.1:6443  | A Kubernetes API     |
+|                      |                 | service              |
++----------------------+-----------------+----------------------+
+| Kubelet API          | 127.0.0.1:10250 | The Kubelet is the   |
+|                      |                 | main component in    |
+|                      |                 | every Node, all pod  |
+|                      |                 | operations goes      |
+|                      |                 | through the kubelet  |
++----------------------+-----------------+----------------------+
+
+No vulnerabilities were found

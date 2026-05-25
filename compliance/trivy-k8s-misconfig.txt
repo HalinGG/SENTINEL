@@ -1,0 +1,33 @@
+
+Summary Report for default
+==========================
+
+Workload Assessment
+┌───────────────────┬────────────────────────────────────────────┬─────────────────────┐
+│     Namespace     │                  Resource                  │  Misconfigurations  │
+│                   │                                            ├───┬───┬────┬────┬───┤
+│                   │                                            │ C │ H │ M  │ L  │ U │
+├───────────────────┼────────────────────────────────────────────┼───┼───┼────┼────┼───┤
+│ secure-middleware │ Deployment/cache-store-deployment          │   │ 3 │ 5  │ 10 │   │
+│ default           │ Job/hidden-in-layers                       │   │ 3 │ 5  │ 11 │   │
+│ default           │ Deployment/health-check-deployment         │   │ 7 │ 11 │ 19 │   │
+│ default           │ Deployment/internal-proxy-deployment       │   │ 5 │ 10 │ 13 │   │
+│ default           │ Deployment/metadata-db                     │   │ 3 │ 6  │ 7  │   │
+│ default           │ Deployment/poor-registry-deployment        │   │ 3 │ 5  │ 9  │   │
+│ default           │ Deployment/system-monitor-deployment       │   │ 6 │ 6  │ 9  │   │
+│ default           │ Deployment/build-code-deployment           │   │ 3 │ 5  │ 9  │   │
+│ default           │ Deployment/kubernetes-goat-home-deployment │   │ 3 │ 6  │ 9  │   │
+│ default           │ Job/batch-check-job                        │   │ 3 │ 5  │ 11 │   │
+│ big-monolith      │ Deployment/hunger-check-deployment         │   │ 3 │ 5  │ 10 │   │
+└───────────────────┴────────────────────────────────────────────┴───┴───┴────┴────┴───┘
+Severities: C=CRITICAL H=HIGH M=MEDIUM L=LOW U=UNKNOWN
+
+
+Infra Assessment
+┌───────────┬──────────┬───────────────────┐
+│ Namespace │ Resource │ Misconfigurations │
+│           │          ├───┬───┬───┬───┬───┤
+│           │          │ C │ H │ M │ L │ U │
+└───────────┴──────────┴───┴───┴───┴───┴───┘
+Severities: C=CRITICAL H=HIGH M=MEDIUM L=LOW U=UNKNOWN
+
